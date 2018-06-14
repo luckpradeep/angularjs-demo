@@ -1,0 +1,12 @@
+<div class="movies-list">
+    <div class="movies-list-container" ng-if="$ctrl.movies && $ctrl.movies.length">   
+        <div ng-repeat="movie in $ctrl.movies" class="movie-box" href="#" ng-click="$ctrl.getFullDetails(movie)">
+            <div ng-if="movie.Poster !== 'N/A'"><img ng-src="{{movie.Poster}}" img-load-error/></div>            
+            <no-preview ng-if="movie.Poster === 'N/A'"></no-preview>
+            <span>{{movie.Title}}</span>
+        </div>
+    </div>    
+    <div ng-hide="!$ctrl.moviesSearched || $ctrl.movies">
+        <div>No Movies found with this search criteria.</div>
+    </div>
+</div>

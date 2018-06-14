@@ -1,0 +1,12 @@
+<div class="app-root text-center form-signin">
+    <div class="search-container">
+            <h1 class="h3 mb-3 font-weight-normal">OMDB Movie Search</h1>
+            <label for="movieName" class="sr-only">Email address</label>
+            <form>
+                    <input type="text" id="movieName" 
+                    class="form-control" placeholder="Movie Name"
+                    ng-model="$ctrl.movieName" ng-change="$ctrl.getMovieDetails($ctrl.movieName);" ng-model-options="{ debounce: 1000 }">
+            </form>            
+    </div>
+    <movies-list movies="$ctrl.resultMovies" movies-searched="$ctrl.isMoviesSearched"></movies-list>
+</div>
