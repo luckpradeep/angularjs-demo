@@ -1,0 +1,23 @@
+.spinner-loader {
+    cursor: not-allowed;
+}
+
+.spinner-loader .spinner-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #205081;
+    opacity: 0.1;
+}
+
+.spinner-loader .spinner-icon {
+    position: fixed;
+    top: 45%;
+    left: 45%;    
+}
+
+.spinner-loader .spinner-icon i {
+    font-size: 60px;
+}

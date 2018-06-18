@@ -9,8 +9,8 @@
         bindToController: true
     };
 
-    movieDetailsComponentCtrl.$inject = ['apiService'];
-    function movieDetailsComponentCtrl(apiService) {
+    movieDetailsComponentCtrl.$inject = ['apiService', 'spinnerLoaderService'];
+    function movieDetailsComponentCtrl(apiService, spinnerLoaderService) {
         var vm = this;   
         
         // methods
@@ -22,9 +22,12 @@
 
         function getFullDetails(imdbID) {
             var urlParams = '&i=' + imdbID;  
-            apiService.getMovieDetails(urlParams).then(function(res) {                                
+            spinnerLoaderService.showSpinner();
+            apiService.getMovieDetails(urlParams).then(function(res) {  
+                spinnerLoaderService.hideSpinner();                              
                 vm.data = res && res.data;
             }, function(e) {
+                spinnerLoaderService.hideSpinner();
                 alert('Something went wrong, Please try again after some time');
                 console.log(e);
             });

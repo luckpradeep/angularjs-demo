@@ -13,9 +13,14 @@
 
         // methods
         vm.getMovieDetails = getMovieDetails;
+        vm.goHome = goHome;
 
         function getMovieDetails(movieName) {    
             $state.go('home', {search: movieName});  
+        }
+
+        function goHome() {
+            $state.go('home', {search: ''});  
         }
     }
 

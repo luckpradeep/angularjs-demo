@@ -1,6 +1,6 @@
 <div class="app-root text-center form-signin">
     <div class="search-container">
-            <h1 class="h3 mb-3 font-weight-normal">OMDB Movie Search</h1>
+            <h1 class="h3 mb-3 font-weight-normal logo-text" ng-click="$ctrl.goHome()">OMDB Movie Search</h1>
             <label for="movieName" class="sr-only">Email address</label>
             <form>
                     <input type="text" id="movieName" 
@@ -10,3 +10,4 @@
     </div>
     <div ui-view></div>
 </div>
+<spinner-loader></spinner-loader>

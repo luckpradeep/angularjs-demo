@@ -6,9 +6,11 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Global Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./styles.css"/>
   <!-- App Module Styles -->
+  <link rel="stylesheet" type="text/css" href="./app/util-components/spinner-loader/spinner-loader.component.css"/>
   <link rel="stylesheet" type="text/css" href="./app/app-root.component.css"/>
   <link rel="stylesheet" type="text/css" href="./app/movies-list/movies-list.component.css"/>
   <link rel="stylesheet" type="text/css" href="./app/movie-details/movie-details.component.css"/>
@@ -20,17 +22,21 @@
   <!-- Angular API -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <script src="https://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/rxjs/4.0.7/rx.lite.min.js"></script> 
   <!-- App Module -->
   <script src="./app/app.module.js"></script>
+  <script src="./app/app.services.js"></script>
   <script src="./app/app.routes.js"></script>
   <!-- App Constants -->
   <script src="./app/services/api-constants.js"></script>
   <!-- App Services -->
   <script src="./app/services/api-service.js"></script>
+  <script src="./app/services/spinner-loader.service.js"></script>
   <!-- App Components -->
   <script src="./app/app-root.component.js"></script>
   <script src="./app/movies-list/movies-list.component.js"></script>
   <script src="./app/movie-details/movie-details.component.js"></script>
   <script src="./app/util-components/no-preview/no-preview.component.js"></script>
+  <script src="./app/util-components/spinner-loader/spinner-loader.component.js"></script>
 </body>
 </html>
