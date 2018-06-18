@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="movie-details row">
+        <div class="details-image col-xs-4 pull-left">
+            <div ng-if="$ctrl.data.Poster !== 'N/A'">
+                <img ng-src="{{$ctrl.data.Poster}}" img-load-error/>
+            </div>
+            <no-preview ng-if="$ctrl.data.Poster === 'N/A'"></no-preview>
+        </div>
+        <div class="details-section pull-left col-xs-9 text-left">
+            <h1>{{$ctrl.data.Title}}</h1>
+            <h5>{{$ctrl.data.Year}}</h5>
+            <h5>{{$ctrl.data.Genre}}</h5>
+            <h5>Plot </h5>
+            <p>{{$ctrl.data.Plot}}</p>
+            <div>
+                <span><img src="./assets/images/logo-imdb.svg" /></span>
+                <span>{{$ctrl.data.imdbRating}}</span>
+            </div>
+        </div>
+    </div>
+</div>

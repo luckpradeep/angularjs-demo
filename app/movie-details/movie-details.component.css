@@ -1,0 +1,10 @@
+.movie-details{
+    margin: 30px;
+}
+.movie-details .details-image {
+    max-width: 300px;
+}
+.movie-details .details-section {
+    max-width: 600px;
+    margin: 30px 0 30px 50px;
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>AngularJS Simple Demo</title>
-  <base href="https://luckpradeep.github.io/angularjs-demo/">
+  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Global Styles -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -11,6 +11,7 @@
   <!-- App Module Styles -->
   <link rel="stylesheet" type="text/css" href="./app/app-root.component.css"/>
   <link rel="stylesheet" type="text/css" href="./app/movies-list/movies-list.component.css"/>
+  <link rel="stylesheet" type="text/css" href="./app/movie-details/movie-details.component.css"/>
 </head>
 <body>
 
@@ -18,8 +19,10 @@
 
   <!-- Angular API -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
   <!-- App Module -->
   <script src="./app/app.module.js"></script>
+  <script src="./app/app.routes.js"></script>
   <!-- App Constants -->
   <script src="./app/services/api-constants.js"></script>
   <!-- App Services -->
@@ -27,6 +30,7 @@
   <!-- App Components -->
   <script src="./app/app-root.component.js"></script>
   <script src="./app/movies-list/movies-list.component.js"></script>
+  <script src="./app/movie-details/movie-details.component.js"></script>
   <script src="./app/util-components/no-preview/no-preview.component.js"></script>
 </body>
 </html>

@@ -2,6 +2,7 @@
     display: inline-block;
     width: 200px;
     margin: 30px;
+    cursor: pointer;
 }
 .movies-list .movie-box img{
     width: 100%;

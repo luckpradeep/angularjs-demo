@@ -7,22 +7,15 @@
         bindToController: true
     }
 
-    appRootComponentCtrl.$inject = ['apiService'];
-    function appRootComponentCtrl(apiService) {
+    appRootComponentCtrl.$inject = ['apiService', '$state'];
+    function appRootComponentCtrl(apiService, $state) {
         var vm = this;
 
         // methods
         vm.getMovieDetails = getMovieDetails;
 
-        function getMovieDetails(movieName) {   
-            vm.isMoviesSearched = true;         
-            var urlParams = '&s=' + movieName;
-            apiService.getMovieDetails(urlParams).then(function(res) {                                
-                vm.resultMovies = res && res.data && res.data.Search;
-            }, function(e) {
-                alert('Something went wrong, Please try again after some time');
-                console.log(e);
-            });
+        function getMovieDetails(movieName) {    
+            $state.go('home', {search: movieName});  
         }
     }
 

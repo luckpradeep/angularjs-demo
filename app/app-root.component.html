@@ -8,5 +8,5 @@
                     ng-model="$ctrl.movieName" ng-change="$ctrl.getMovieDetails($ctrl.movieName);" ng-model-options="{ debounce: 1000 }">
             </form>            
     </div>
-    <movies-list movies="$ctrl.resultMovies" movies-searched="$ctrl.isMoviesSearched"></movies-list>
+    <div ui-view></div>
 </div>
